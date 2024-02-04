@@ -15,7 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,6 +49,22 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 5px;
+}
+.sub-heading {
+  color: #f60;
+  font-size: 20px;
+}
+.sub-heading::after {
+  content: "";
+  margin-right: 10px;
+}
+p {
+  line-height: 28px;
+  text-align: justify;
+}
+h2{
+  color: rgb(255, 0, 242);
+  font-size: 22px;
 }
 
 @supports not selector(::-webkit-scrollbar) {

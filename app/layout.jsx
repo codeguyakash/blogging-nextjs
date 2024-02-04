@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <div className="bg-slate-600 w-auto">
+          {/* nav here */}
           <nav className="text-white bg-slate-600 h-20 flex items-center justify-between w-[90%] m-auto">
             <div>
               <ul className="flex gap-5">
@@ -53,8 +54,11 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
         </div>
+        {/* main content here */}
         <main className="h-auto w-[90%] m-auto mt-5">{children}</main>
+        {/* footer here */}
         <footer >
+          <div className="border-t-[1px] border-slate-900 w-[70%] m-auto mt-10"></div>
           <div className="h-48 flex items-center justify-center">
             <ul className="flex items-center justify-center gap-10">
               <li>youtube</li>
