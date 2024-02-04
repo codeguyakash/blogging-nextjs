@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Image from "next/image";
 import ImagePath from "../public/assets/images/image.jpg";
 
@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className="w-[80%] m-auto">
       <h1 className="text-3xl my-5 border-b py-5">All article</h1>
-      < span className="text-2xl my-2">
+      <span className="text-2xl my-2">
         Demystifying DNS: A Beginner's Guide to How the Internet Finds Its Way
-      </ span>
+      </span>
       <Image
         src={ImagePath}
         width={1200}
@@ -18,7 +18,7 @@ export default function Home() {
       />
       <br />
       <p>
-        < span>Introduction:</ span>
+        <span>Introduction:</span>
         Ever wondered how, when you type a website address into your browser, it
         magically takes you to the right place on the internet? That's the work
         of DNS or Domain Name System, a behind-the-scenes hero of the internet.
@@ -26,14 +26,14 @@ export default function Home() {
         functions and importance in a way that's easy for anyone to understand.
         <br />
         <br />
-        < span>1. What is DNS?</ span>
+        <span>1. What is DNS?</span>
         Imagine the internet as a massive city with millions of buildings, each
         having its unique address. In this analogy, DNS is like a friendly guide
         that translates the names of these buildings (websites) into their
         numerical addresses (IP addresses) that computers use to communicate.
         <br />
         <br />
-        < span>2. The Basics of DNS:</ span>
+        <span>2. The Basics of DNS:</span>
         Domain Names: A domain name is the human-readable address of a website,
         like www.codeguyakash.me This is what you type into your browser's
         address bar.
@@ -43,7 +43,7 @@ export default function Home() {
         the internet.
         <br />
         <br />
-        < span>3. How DNS Works:</ span>
+        <span>3. How DNS Works:</span>
         When you enter a domain name in your browser, here's what happens behind
         the scenes:
         <br />
@@ -79,13 +79,13 @@ export default function Home() {
         website's server directly, and you find yourself on the desired webpage.
         <br />
         <br />
-        < span>4. DNS Propagation:</ span> DNS propagation occurs when changes are
+        <span>4. DNS Propagation:</span> DNS propagation occurs when changes are
         made to a domain (like switching hosting providers). This is the time it
         takes for the updated information to spread across all DNS servers
         worldwide.
         <br />
         <br />
-        < span>5. Importance of DNS:</ span> User-Friendly Internet: DNS makes the
+        <span>5. Importance of DNS:</span> User-Friendly Internet: DNS makes the
         internet user-friendly by allowing us to use easily remembered domain
         names instead of dealing with complicated IP addresses.
         <br />
@@ -98,7 +98,7 @@ export default function Home() {
         servers fail.
         <br />
         <br />
-        < span>Conclusion:</ span> In essence, DNS is the unsung hero that makes
+        <span>Conclusion:</span> In essence, DNS is the unsung hero that makes
         internet navigation seamless for users. Understanding its basic
         functions helps us appreciate the intricate web of technology that
         brings our favorite websites to our fingertips. So, the next time you
