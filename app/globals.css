@@ -15,6 +15,13 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border:1px solid #f60; */
+  /* border:1px solid #ff1493; */
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,8 +31,30 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  
 
+  --sb-track-color: #000000;
+  --sb-thumb-color: #475569;
+  --sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 @layer utilities {

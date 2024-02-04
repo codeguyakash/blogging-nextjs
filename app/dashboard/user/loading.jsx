@@ -1,4 +1,4 @@
 
 export default function Loading() {
-  return <span className="text-center">Loading...</span>;
+  return <h3 className="text-center">Loading...</h3>;
 }

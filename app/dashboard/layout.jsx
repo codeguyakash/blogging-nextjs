@@ -1,9 +1,6 @@
 const DashboardLayout = ({ children }) => {
   return (
-    <div>
-      <nav>
-        <h2>NAVBsssssssssssssAR</h2>
-      </nav>
+    <div className="h-auto">
       <div>{children}</div>
     </div>
   );
