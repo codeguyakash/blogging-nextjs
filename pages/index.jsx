@@ -1,7 +1,17 @@
 import { Inter } from "next/font/google";
+import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(props) {
+  const [developer, setDeveloper] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const res = await (await fetch("/api/hello")).json();
+      setDeveloper(res);
+    }
+    fetchData();
+  }, []);
+  console.log("OK!");
   return (
     <>
       <main className={`items-center p-24 ${inter.className} h-[100vh]`}>
@@ -14,7 +24,7 @@ export default function Home(props) {
               {props.data && props.data.description}
             </p>
             <p className="text-center text-green-500 mt-1">
-              {props.data2 && props.data2.name}
+              {developer && developer.name}
             </p>
           </div>
         </div>
@@ -25,11 +35,9 @@ export default function Home(props) {
 
 export const getServerSideProps = async () => {
   const data = await (await fetch("https://api.codeguyakash.me/")).json();
-  const data2 = await (await fetch("http://localhost:3000/api/hello/")).json();
   return {
     props: {
       data,
-      data2,
     },
   };
 };
