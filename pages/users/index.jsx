@@ -8,16 +8,16 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Home() {
   const { data, error } = useSWR(`https://dummyjson.com/users`, fetcher);
   if (error) {
-    return <h1 className="text-center text-2xl pt-24">Error ☹</h1>;
+    return <div className="text-center text-2xl pt-24 h-[100vh]">Error ☹</div>;
   }
   if (!data) {
-    return <h1 className="text-center text-2xl pt-24">Loading...</h1>;
+    return <div className="text-center text-2xl pt-24 h-[100vh]">Loading...</div>;
   }
 
   return (
-    <main className={`items-center p-24 ${inter.className}`}>
+    <div className={`items-center p-24 ${inter.className} h-[100vh]`}>
       <h1 className="text-3xl text-center">Client Side</h1>
-      <div>
+      <div className="h-[100%]">
         {data &&
           data.users &&
           data.users.map((user) => (
@@ -28,6 +28,6 @@ export default function Home() {
             </div>
           ))}
       </div>
-    </main>
+    </div>
   );
 }

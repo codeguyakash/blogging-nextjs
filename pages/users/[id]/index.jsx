@@ -16,7 +16,7 @@ const UserInfo = () => {
   }, [router.query.id]);
 
   return (
-    <div className="items-center p-24">
+    <div className="items-center p-24 h-[100vh]">
       <h1 className="text-3xl text-center">User id </h1>
       <h1 className="text-3xl text-center">User id : {users?.id}</h1>
       <h1 className="text-3xl text-center">Username : {users?.firstName}</h1>

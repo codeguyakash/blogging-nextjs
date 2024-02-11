@@ -2,7 +2,7 @@ import React from "react";
 
 const index = (props) => {
   return (
-    <main className={`items-center p-24`}>
+    <main className={`items-center p-24 h-[100vh]`}>
       <h1 className="text-3xl text-center">
         Profile Page of
         <span className=" text-red-700 mx-4">{props.data?.firstName}</span>
