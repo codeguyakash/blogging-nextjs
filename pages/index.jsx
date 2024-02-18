@@ -17,7 +17,7 @@ export default function Home(props) {
       <main className={`items-center p-24 ${inter.className} h-[100vh]`}>
         <div className="flex justify-center ">
           <div>
-            <h1 className="text-4xl font-semibold rounded-md text-center bg-gray-50 inline px-10 py-4">
+            <h1 className="text-4xl font-semibold rounded-md text-center inline px-10 py-4">
               {props.data && props.data.projectName}
             </h1>
             <p className="text-center text-yellow-500 mt-6">
