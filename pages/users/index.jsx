@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Home() {
-  const { data, error } = useSWR(`https://dummyjson.com/users`, fetcher);
+  const { data, error } = useSWR(`https://api.techlogs.tech/api/v1/blogs`, fetcher);
   if (error) {
     return <div className="text-center text-2xl pt-24 h-[100vh]">Error ☹</div>;
   }
@@ -18,7 +18,7 @@ export default function Home() {
     <div className={`items-center p-24 ${inter.className} h-[100vh]`}>
       <h1 className="text-3xl text-center">Client Side</h1>
       <div className="h-[100%]">
-        {data &&
+        {/* {data &&
           data.users &&
           data.users.map((user) => (
             <div key={user.id}>
@@ -26,7 +26,7 @@ export default function Home() {
                 <li>{user.firstName}</li>
               </Link>
             </div>
-          ))}
+          ))} */}
       </div>
     </div>
   );

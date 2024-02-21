@@ -7,13 +7,13 @@ export default function Document() {
       <Head />
       <body>
         <nav className="pt-5 flex items-center">
-          <div className="m-auto text-2xl flex gap-5">
-            <Link href="/">home</Link>
-            <Link href="/serverside">serverside</Link>
-            <Link href="/users">clientside</Link>
-            <Link href="/users/1">userinfo</Link>
-            <Link href="/users/profile/2">userprofile</Link>
-            <Link href="/staticside">staticside</Link>
+          <div className="m-auto text-[14px] flex gap-5">
+            <Link href="/">HOME</Link>
+            <Link href="/serverside">BLOGS</Link>
+            <Link href="/users">CLIENTSIDE</Link>
+            <Link href="/users/1">USERINFO</Link>
+            <Link href="/users/profile/2">USERPROFILE</Link>
+            <Link href="/staticside">STATICSIDE</Link>
           </div>
         </nav>
         <Main />
