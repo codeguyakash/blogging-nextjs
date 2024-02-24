@@ -9,7 +9,7 @@ const Loader = () => {
             <div className="h-2 bg-[#111213] rounded"></div>
             <div className="h-2 bg-[#111213] rounded"></div>
             <div className="grid grid-cols-2 gap-14 space-x-64">
-              <div className="h-2 bg-[#111213] w-44 rounded"></div>
+              <div className="h-2 sm:hidden md:block bg-[#111213] w-44 rounded"></div>
               <div className="h-2 bg-[#111213] w-44 rounded"></div>
             </div>
           </div>
