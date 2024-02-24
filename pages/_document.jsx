@@ -5,19 +5,27 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
-        <nav className="pt-5 flex items-center">
-          <div className="m-auto text-[14px] flex gap-5">
-            <Link href="/">HOME</Link>
-            <Link href="/serverside">BLOGS</Link>
-            <Link href="/users">CLIENTSIDE</Link>
-            <Link href="/users/1">USERINFO</Link>
-            <Link href="/users/profile/2">USERPROFILE</Link>
-            <Link href="/staticside">STATICSIDE</Link>
+      <body className="py-10">
+        <nav className="flex items-center justify-center">
+          <div className=" flex align-center justify-center w-[55%] py-2">
+
+            <div className="text-[14px] font-semibold flex gap-5">
+              <Link href="/">HOME</Link>
+              <Link href="/blogs">BLOGS</Link>
+              <Link href="/staticside">STATICSIDE</Link>
+            </div>
+
           </div>
         </nav>
         <Main />
         <NextScript />
+        <div className="font-semibold w-full mt-10 md:px-8 lg:px-20 xl:px-96 2xl:[30rem] flex items-center justify-center">
+          <div className="max-w-max-content text-2xl">
+            <a href="https://github.com/codeguyakash" target="_blank">
+              made with ❤️ by codeguyakash
+            </a>
+          </div>
+        </div>
       </body>
     </Html>
   );

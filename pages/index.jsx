@@ -1,32 +1,28 @@
 import { Inter } from "next/font/google";
-import { useEffect, useState } from "react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(props) {
-  const [developer, setDeveloper] = useState([]);
-  useEffect(() => {
-    async function fetchData() {
-      const res = await (await fetch("/api/hello")).json();
-      setDeveloper(res);
-    }
-    fetchData();
-  }, []);
-  console.log("OK!");
   return (
     <>
-      <main className={`items-center p-24 ${inter.className} h-[100vh]`}>
-        <div className="flex justify-center ">
-          <div>
-            <h1 className="text-4xl font-semibold rounded-md text-center inline px-10 py-4">
-              {props.data && props.data.projectName}
-            </h1>
-            <p className="text-center text-yellow-500 mt-6">
-              {props.data && props.data.description}
-            </p>
-            <p className="text-center text-green-500 mt-1">
-              {developer && developer.name}
-            </p>
-          </div>
+      <main
+        className={`items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem] ${inter.className}`}
+      >
+        <h1 className="text-4xl font-bold text-center mb-10">
+          Blogs (SSR)
+        </h1>
+        <div>
+          {props.data.map((blog) => (
+            <div key={blog._id} className="my-5">
+              <h2 className="text-2xl font-bold text-[#d0d0d0]">
+                {blog.title.slice(0, 100)}
+              </h2>
+              <p className="text-justify text-[#969696] line-clamp-2 my-2">
+                {blog.content}
+              </p>
+              <span className="text-[#c5c5c5]">Readmore...</span>
+            </div>
+          ))}
         </div>
       </main>
     </>
@@ -34,7 +30,7 @@ export default function Home(props) {
 }
 
 export const getServerSideProps = async () => {
-  const data = await (await fetch("https://api.techlogs.tech/")).json();
+  const data = await (await fetch("https://api.techlogs.tech/api/v1/blogs")).json();
   return {
     props: {
       data,
