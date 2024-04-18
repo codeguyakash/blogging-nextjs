@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 
 export default function BlogInfo() {
@@ -22,14 +22,14 @@ export default function BlogInfo() {
       return;
     }
     async function getUserById(id) {
-      const res = await fetch(`https://api.techlogs.tech/api/v1/blog/${id}`);
+      const res = await fetch(
+        `https://techlog-tech-585621892456.herokuapp.com/api/v1/blog/${id}`
+      );
       const data = await res.json();
       setBlog(data);
     }
     getUserById(id);
   }, [router.query.id]);
-
-  console.log(blog);
 
   return (
     <div className="items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">

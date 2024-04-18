@@ -8,9 +8,7 @@ export default function Home(props) {
       <main
         className={`items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem] ${inter.className}`}
       >
-        <h1 className="text-4xl font-bold text-center mb-10">
-          Blogs (SSR)
-        </h1>
+        <h1 className="text-4xl font-bold text-center mb-10">Blogs (SSR)</h1>
         <div>
           {props.data.map((blog) => (
             <div key={blog._id} className="my-5">
@@ -30,7 +28,8 @@ export default function Home(props) {
 }
 
 export const getServerSideProps = async () => {
-  const data = await (await fetch("https://api.techlogs.tech/api/v1/blogs")).json();
+  const response = await fetch("https://techlog-tech-585621892456.herokuapp.com/api/v1/blogs");
+  const data = await response.json();
   return {
     props: {
       data,
