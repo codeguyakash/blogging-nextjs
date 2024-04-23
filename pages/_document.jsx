@@ -4,17 +4,19 @@ import Link from "next/link";
 export default function Document() {
   return (
     <Html lang="en">
+      <meta
+        name="google-site-verification"
+        content="Cvv464XYmbWGDUozX_mRq5NYiK_pB6KlsjY0oLU-25Q"
+      />
       <Head />
       <body className="py-10">
         <nav className="flex items-center justify-center">
           <div className=" flex align-center justify-center w-[55%] py-2">
-
             <div className="text-[14px] font-semibold flex gap-5">
               <Link href="/">HOME</Link>
               <Link href="/blogs">BLOGS</Link>
               <Link href="/staticside">STATICSIDE</Link>
             </div>
-
           </div>
         </nav>
         <Main />
