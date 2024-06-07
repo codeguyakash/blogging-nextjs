@@ -8,16 +8,22 @@ export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    try {
-      setIsLoading(true);
-      axios
-        .get("/api/v1/blogs")
-        .then((res) => setBlogs(res.data), setIsLoading(false))
-        .catch((error) => console.log(error));
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await axios.get("/api/v1/blogs");
+        setBlogs(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
+
   console.log(blogs);
   return (
     <div className="items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">
