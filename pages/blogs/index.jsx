@@ -18,7 +18,7 @@ export default function Home() {
       })
       .catch((error) => {
         console.log(error);
-        setIsLoading(false); // Change to false on error
+        setIsLoading(false);
       });
   }, []);
 
