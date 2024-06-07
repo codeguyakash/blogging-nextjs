@@ -1,21 +1,12 @@
-/** @type {import('next').NextConfig} */
+import { createProxyMiddleware } from "http-proxy-middleware";
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
+  async rewrites() {
+    return [
       {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/techlogdottech/image/**",
+        source: "/api/:path*",
+        destination: "http://localhost:5000/api/:path*",
       },
-      {
-        protocol: "https",
-        hostname: "miro.medium.com",
-        port: "",
-        pathname: "/v2/**",
-      },
-    ],
+    ];
   },
 };
 
