@@ -9,6 +9,12 @@ const nextConfig = {
         port: "",
         pathname: "/techlogdottech/image/**",
       },
+      {
+        protocol: "https",
+        hostname: "miro.medium.com",
+        port: "",
+        pathname: "/v2/**",
+      },
     ],
   },
 };

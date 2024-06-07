@@ -46,8 +46,8 @@ export default function BlogInfo() {
       </div>
       <Image
         src={blog?.blogImage}
-        width={700}
-        height={600}
+        width={1200}
+        height={630}
         className="my-5 block mx-auto"
         alt="blogPost"
       />
