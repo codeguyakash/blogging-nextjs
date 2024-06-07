@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className=" flex flex-col items-center justify-center gap-5 px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">
+    <div className="items-center mt-5 px-4 md:px-0 md:w-full mx-auto flex flex-col gap-3">
       <h1 className="text-4xl font-bold text-center">About</h1>
       <h2 className="text-2xl font-bold">Who am I 🧑💻</h2>
       <p className="text-zinc-300">
@@ -12,7 +12,7 @@ const page = () => {
         once I discovered it,
         <br /> I immediately fell in love.
       </p>
-      <h2 className="text-xl font-semibold">💡 Specialization</h2>
+      <h2 className="text-xl font-semibold my-4">💡 Specialization</h2>
       <ul className=" text-zinc-300 list-disc list-inside">
         <li>JavaScript & React</li>
         <li>JavaScript is my playground</li>
@@ -22,12 +22,12 @@ const page = () => {
           experiences
         </li>
       </ul>
-      <h2 className="mt-6 text-xl font-semibold">📚 Current Learning</h2>
-      <ul className="mt-2 text-zinc-300 list-disc list-inside">
+      <h2 className=" text-xl font-semibold">📚 Current Learning</h2>
+      <ul className=" text-zinc-300 list-disc list-inside">
         <li>I'm currently learning Full Stack Development</li>
       </ul>
-      <h2 className="mt-6 text-xl font-semibold">🤝 Let's Connect </h2>
-      <ul className="mt-2 text-zinc-300 gap-4 flex">
+      <h2 className=" text-xl font-semibold">🤝 Let's Connect </h2>
+      <ul className=" text-zinc-300 gap-4 flex">
       <li>
           <a
             href="https://twitter.com/codeguyakash"

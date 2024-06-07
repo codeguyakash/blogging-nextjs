@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="px-2 py-20 md:px-8 flex flex-col items-center justify-center">
-      <div className="border-2 rounded border-zinc-900 w-[90vw] md:w-[50vw] p-5 ">
+      <div className="borders-2 rounded border-zinc-900 w-[90vw] md:w-[50vw] p-5 ">
         <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 text-center">
           TECHLOGS.TECH
         </h1>

@@ -23,21 +23,20 @@ export default function Blogs() {
     fetchData();
   }, []);
 
-  console.log(blogs);
   return (
-    <div className="items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">
+    <div className="items-center mt-5 px-4 w-full md:px-0 md:w-1/2 mx-auto">
       <h1 className="text-4xl font-bold text-center mb-10">Blogs</h1>
       {isLoading ? (
         <h1 className="text-2xl text-center mb-10">Fetching... </h1>
       ) : (
         blogs.map((blog) => (
           <div key={blog._id} className="my-5">
-            <h2 className="text-2xl font-bold ">
+            <h2 className="text-2xl font-bold text-justify">
               {blog.title.slice(0, 160)}...
             </h2>
             <p
-              className="text-zinc-300 my-2"
-              dangerouslySetInnerHTML={{ __html: blog.content }}
+              className="text-zinc-300 my-2 text-justify"
+              dangerouslySetInnerHTML={{ __html: blog.content.slice(0, 300) }}
             ></p>
             <div className="flex justify-between">
               <div className="text-white font-semibold">

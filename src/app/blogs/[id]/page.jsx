@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import Image from "next/image";
+// import Image from "next/image";
 
 const page = () => {
   const timeOptions = {
@@ -31,7 +31,7 @@ const page = () => {
     getUserById(id);
   }, [id]);
   return (
-    <div className=" flex flex-col items-center justify-center gap-5 px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">
+    <div className="items-center mt-5 px-4 w-full md:px-0 md:w-2/3 mx-auto min-h-full">
       <div
         onClick={() => router.back()}
         className="text-white font-semibold cursor-pointer"

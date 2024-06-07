@@ -12,7 +12,7 @@ const page = () => {
     }, 2500);
   };
   return (
-    <div className="items-center px-8 mt-5 md:px-8 lg:px-20 xl:px-96 2xl:[30rem]">
+    <div className="items-center px-8 mt-5">
       <h1 className="text-4xl font-bold text-center mb-10">Subscribe</h1>
       <div className="flex items-center justify-center relative">
         <button

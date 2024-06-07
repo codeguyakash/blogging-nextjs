@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col items-center justify-between h-screen">
+        <div className="flex flex-col items-center justify-between min-h-screen">
           <nav className="flex items-center justify-center backdrop-blur-lg fixed w-full border-b-2 border-zinc-900 py-5">
             <div className=" flex align-center justify-center w-[55%] py-2">
               <div className="text-[14px] font-semibold flex gap-5">
