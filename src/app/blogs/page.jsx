@@ -15,7 +15,6 @@ export default function Blogs() {
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
-
       } finally {
         setIsLoading(false);
       }
@@ -33,15 +32,14 @@ export default function Blogs() {
       ) : (
         blogs.map((blog) => (
           <div key={blog._id} className="my-5">
-            <h2 className="text-2xl font-bold text-[#d0d0d0]">
-              {blog.title.slice(0, 100)}...
+            <h2 className="text-2xl font-bold ">
+              {blog.title.slice(0, 160)}...
             </h2>
-            <div
-              className="text-justify text-[#969696] my-2"
+            <p
+              className="text-zinc-300 my-2"
               dangerouslySetInnerHTML={{ __html: blog.content }}
-            ></div>
-            <Link href={`blogs/${blog._id}`} className="flex justify-between">
-              <div className="text-white font-semibold">Read more...</div>
+            ></p>
+            <div className="flex justify-between">
               <div className="text-white font-semibold">
                 {new Date(blog?.createdAt).toLocaleString("en-IN", {
                   weekday: "short",
@@ -50,7 +48,10 @@ export default function Blogs() {
                   year: "numeric",
                 })}
               </div>
-            </Link>
+              <Link href={`blogs/${blog._id}`}>
+                <div className="text-white font-semibold">read more</div>
+              </Link>
+            </div>
           </div>
         ))
       )}

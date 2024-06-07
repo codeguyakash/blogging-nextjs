@@ -4,7 +4,10 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://techlog-tech-585621892456.herokuapp.com/api/:path*",
+        // destination:
+        //   "http://localhost:5000/api/:path*",
+        destination:
+          "https://techlog-tech-585621892456.herokuapp.com/api/:path*",
       },
     ];
   },

@@ -23,22 +23,24 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32 flex flex-col items-center justify-center">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 text-center">
-        TECHLOGS.TECH
-      </h1>
-      {isLoading ? (
-        <span>Loading...</span>
-      ) : (
-        <div className="flex flex-col items-center justify-center">
-          <h3 className="text-xl text-center md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">
-            {appName.projectName}
-          </h3>
-          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-center inline-block w-2/3">
-            {appName.description}
-          </p>
-        </div>
-      )}
+    <div className="px-2 py-20 md:px-8 flex flex-col items-center justify-center">
+      <div className="border-2 rounded border-zinc-900 w-[90vw] md:w-[50vw] p-5 ">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 text-center">
+          TECHLOGS.TECH
+        </h1>
+        {isLoading ? (
+          <span>Loading...</span>
+        ) : (
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="text-xl text-center md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">
+              {appName.projectName}
+            </h3>
+            <p className="text-sm font-thin md:text-base lg:text-lg xl:text-xl text-center">
+              {appName.description}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
