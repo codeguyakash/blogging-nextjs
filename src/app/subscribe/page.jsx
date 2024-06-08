@@ -7,17 +7,25 @@ const Subscribe = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedBtnName = localStorage.getItem("subscribed");
-      if (storedBtnName) {
-        setBtnName(storedBtnName);
+      try {
+        const storedBtnName = localStorage.getItem("subscribed");
+        if (storedBtnName) {
+          setBtnName(storedBtnName);
+        }
+      } catch (error) {
+        console.error("Error accessing localStorage:", error);
       }
     }
   }, []);
 
   const showModelHandler = () => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("subscribed", "Subscribed");
-      setBtnName("Subscribed");
+      try {
+        localStorage.setItem("subscribed", "Subscribed");
+        setBtnName("Subscribed");
+      } catch (error) {
+        console.error("Error accessing localStorage:", error);
+      }
     }
     setShowModel(true);
     setTimeout(() => {
@@ -36,14 +44,12 @@ const Subscribe = () => {
           {btnName}
         </button>
       </div>
-      {showModel ? (
+      {showModel && (
         <div className="w-96 h-40 border border-zinc-900 rounded-lg px-5 py-10 mt-10">
           <p className="text-center text-2xl">
             Thanking You <br /> for Subscribing ... 😊
           </p>
         </div>
-      ) : (
-        ""
       )}
     </div>
   );
