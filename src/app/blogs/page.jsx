@@ -34,27 +34,27 @@ export default function Blogs() {
       ) : error ? (
         <h1 className="text-2xl text-center text-red-500 mb-10">{error}</h1>
       ) : (
-        blogs.map((blog) => (
-          <div key={blog._id} className="my-5">
+        blogs?.map((blog) => (
+          <div key={blog?._id} className="my-5">
             <h2 className="text-2xl font-bold text-justify">
-              {blog.title.length > 160
-                ? `${blog.title.slice(0, 160)}...`
-                : blog.title}
+              {blog?.title.length > 160
+                ? `${blog?.title.slice(0, 160)}...`
+                : blog?.title}
             </h2>
             <p
               className="text-zinc-300 my-2 text-justify"
-              dangerouslySetInnerHTML={{ __html: blog.content.slice(0, 300) }}
+              dangerouslySetInnerHTML={{ __html: blog?.content.slice(0, 300) }}
             ></p>
             <div className="flex justify-between">
               <div className="text-white font-semibold">
-                {new Date(blog.createdAt).toLocaleString("en-IN", {
+                {new Date(blog?.createdAt).toLocaleString("en-IN", {
                   weekday: "short",
                   month: "short",
                   day: "2-digit",
                   year: "numeric",
                 })}
               </div>
-              <Link href={`blogs/${blog._id}`}>
+              <Link href={`blogs/${blog?._id}`}>
                 <div className="text-white font-semibold">read more</div>
               </Link>
             </div>
