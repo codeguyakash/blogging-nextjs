@@ -29,7 +29,7 @@ export default function Home() {
           TECHLOGS.TECH
         </h1>
         {isLoading ? (
-          <span>Loading...</span>
+          <p className="text-center">Loading...</p>
         ) : (
           <div className="flex flex-col items-center justify-center">
             <h3 className="text-xl text-center md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-6">

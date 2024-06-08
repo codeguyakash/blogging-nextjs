@@ -1,11 +1,8 @@
-import { createProxyMiddleware } from "http-proxy-middleware";
 const nextConfig = {
   async rewrites() {
     return [
       {
         source: "/api/:path*",
-        // destination:
-        //   "http://localhost:5000/api/:path*",
         destination:
           "https://techlog-tech-585621892456.herokuapp.com/api/:path*",
       },
