@@ -1,6 +1,6 @@
 import React from "react";
 
-const page = () => {
+const About = () => {
   return (
     <div className="items-center mt-5 px-4 md:px-0 md:w-full mx-auto flex flex-col gap-3">
       <h1 className="text-4xl font-bold text-center">About</h1>
@@ -28,7 +28,7 @@ const page = () => {
       </ul>
       <h2 className=" text-xl font-semibold">🤝 Let's Connect </h2>
       <ul className=" text-zinc-300 gap-4 flex">
-      <li>
+        <li>
           <a
             href="https://twitter.com/codeguyakash"
             target="_blank"
@@ -93,4 +93,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;

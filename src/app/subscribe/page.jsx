@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const page = () => {
+const Subscribe = () => {
   const [showModel, setShowModel] = useState(false);
   let btnName = localStorage.getItem("subscribed");
   const showModelHandler = () => {
@@ -35,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Subscribe;

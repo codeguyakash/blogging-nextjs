@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 // import Image from "next/image";
 
-const page = () => {
+const BlogContent = () => {
   const timeOptions = {
     timeZone: "Asia/Kolkata",
     weekday: "short",
@@ -62,4 +62,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogContent;
