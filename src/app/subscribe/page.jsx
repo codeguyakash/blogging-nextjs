@@ -1,16 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Subscribe = () => {
   const [showModel, setShowModel] = useState(false);
-  let btnName = localStorage.getItem("subscribed");
+  const [btnName, setBtnName] = useState("Subscribe");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedBtnName = localStorage.getItem("subscribed");
+      if (storedBtnName) {
+        setBtnName(storedBtnName);
+      }
+    }
+  }, []);
+
   const showModelHandler = () => {
-    localStorage.setItem("subscribed", "Subscribed");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("subscribed", "Subscribed");
+      setBtnName("Subscribed");
+    }
     setShowModel(true);
     setTimeout(() => {
       setShowModel(false);
     }, 2500);
   };
+
   return (
     <div className="items-center px-8 mt-5">
       <h1 className="text-4xl font-bold text-center mb-10">Subscribe</h1>
